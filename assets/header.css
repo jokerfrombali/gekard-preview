@@ -136,3 +136,26 @@ body.mnav .mnavp{display:block;position:absolute;left:0;right:0;top:100%;backgro
 /* подвал на фирменной текстуре из знака G — как блок «Документы» */
 .ftr2{background:#11171c url(img/pattern.svg) repeat}
 .ftr2 .fform input,.ftr2 .fph span,.ftr2 .fs,.ftr2 .fprice{background:rgba(23,30,36,.92)}
+/* === шапка строго в сетке 1320px (центрирование) === */
+.hA .hcta{display:none!important}
+.hA>.row{gap:12px}
+.hA .nav2{flex:1 1 auto;min-width:0;gap:2px;justify-content:center}
+.hA .nav2 a{font-size:15px;padding:8px 8px}
+.hA .catbtn{padding:0 18px}
+.hA .phpill{padding:0 16px}
+.hA .mico{width:48px;height:48px}
+@media(max-width:1440px){.hA .nav2 a:nth-child(4){display:none}}
+@media(max-width:1320px){.hA .nav2 a:nth-child(2){display:none}}
+/* === мессенджеры: фирменные цвета, анимация нажатия, без «заливки» браузера === */
+.mico,.fs{-webkit-tap-highlight-color:transparent;outline:none;position:relative;overflow:hidden;transition:transform .18s ease,background .25s,border-color .25s,color .25s,box-shadow .25s}
+.mico:focus:not(:focus-visible),.fs:focus:not(:focus-visible){outline:none}
+.mico:focus-visible,.fs:focus-visible{box-shadow:0 0 0 3px rgba(250,180,50,.55)}
+.mico:visited,.fs:visited{color:inherit}
+.mico.tg:hover,.fs.tg:hover{background:#229ED9;border-color:#229ED9;color:#fff;box-shadow:0 10px 24px rgba(34,158,217,.35)}
+.mico.wa:hover,.fs.wa:hover{background:#25D366;border-color:#25D366;color:#fff;box-shadow:0 10px 24px rgba(37,211,102,.35)}
+.mico.mx:hover,.fs.mx:hover{background:linear-gradient(135deg,#3d6cff,#9b4dff);border-color:#7a5cff;color:#fff;box-shadow:0 10px 24px rgba(122,92,255,.35)}
+.mico:hover,.fs:hover{transform:translateY(-2px)}
+.mico:active,.fs:active{transform:scale(.92)}
+.mico.dk.tg:hover,.mico.dk.wa:hover,.mico.dk.mx:hover{color:#fff}
+.mico:after,.fs:after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle,rgba(255,255,255,.45) 10%,transparent 11%) center/0 0 no-repeat;transition:background-size .45s}
+.mico:active:after,.fs:active:after{background-size:260% 260%;transition:background-size 0s}
