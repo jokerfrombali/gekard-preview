@@ -88,3 +88,11 @@
  .cfg2 summary{font-size:15px}.cfg2 summary small{display:none}
  .pagehead h1{font-size:30px}
 }
+/* первый экран = высота окна минус шапка: бегущая строка начинается строго ниже сгиба */
+.h2hero{min-height:calc(100vh - 92px);min-height:calc(100svh - 92px);display:flex;align-items:center}
+.h2hero .wrap{padding-top:48px;padding-bottom:40px}
+@media(min-height:1000px){.h2hero .wrap{padding-top:70px;padding-bottom:60px}}
+@media(max-height:760px) and (min-width:901px){.h2hero h1{font-size:clamp(36px,4.4vw,64px)}.h2stats{margin-top:28px}.h2hero .lead{margin:14px 0 20px}}
+@media(max-width:900px){.h2hero{min-height:calc(100svh - 74px)}}
+@media(max-height:830px) and (min-width:901px){.h2hero .wrap{padding-top:28px;padding-bottom:24px}.h2hero h1{font-size:clamp(34px,4.3vw,62px)}.h2hero .lead{margin:12px 0 18px;font-size:18px}.h2stats{margin-top:22px}.h2stats div{padding-top:14px}.h2stats b{font-size:clamp(28px,3vw,44px)}.h2hero .eyebrow{margin-bottom:10px}}
+@media(max-height:700px) and (min-width:901px){.h2hero h1{font-size:clamp(30px,3.8vw,50px)}.h2hero .lead{display:none}.h2hero .ctas .btn{padding:14px 22px}}
