@@ -159,3 +159,36 @@ body.mnav .mnavp{display:block;position:absolute;left:0;right:0;top:100%;backgro
 .mico.dk.tg:hover,.mico.dk.wa:hover,.mico.dk.mx:hover{color:#fff}
 .mico:after,.fs:after{content:"";position:absolute;inset:0;border-radius:inherit;background:radial-gradient(circle,rgba(255,255,255,.45) 10%,transparent 11%) center/0 0 no-repeat;transition:background-size .45s}
 .mico:active:after,.fs:active:after{background-size:260% 260%;transition:background-size 0s}
+/* ===== мобильное меню v2: выдвижная панель ===== */
+.hdr .mnavp .wrap,.mnavp *{height:auto}
+.mnavp{display:block!important;position:fixed;left:0;right:0;top:74px;bottom:0;z-index:79;background:#11171c;transform:translateX(100%);transition:transform .35s cubic-bezier(.2,.7,.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;visibility:hidden;box-shadow:none;padding:0}
+body.mnav .mnavp{transform:none;visibility:visible;position:fixed;top:74px;padding:0;box-shadow:none}
+body.mnav{overflow:hidden}
+.mnin{padding:14px 18px 40px}
+.mh2{font:700 13px 'Roboto Condensed',Arial;letter-spacing:.14em;text-transform:uppercase;color:#fab432;margin:18px 0 6px}
+.macc{border-bottom:1px solid #1f272e}
+.macc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;padding:15px 0;color:#fff;font:600 18px 'Roboto',Arial}
+.macc summary::-webkit-details-marker{display:none}
+.macc summary:after{content:"";width:10px;height:10px;border-right:2px solid #fab432;border-bottom:2px solid #fab432;transform:rotate(45deg);transition:transform .25s;margin-right:4px}
+.macc[open] summary:after{transform:rotate(-135deg)}
+.maccb{padding:0 0 12px 12px;border-left:2px solid #232c34;margin-bottom:10px}
+.mnavp .maccb a,.mnavp a.mlink{display:block;color:#c9ced4;text-decoration:none;font-size:16px;padding:9px 0;border:0}
+.mnavp a.mlink{color:#fff;font:600 18px 'Roboto',Arial;padding:15px 0;border-bottom:1px solid #1f272e}
+.mnavp a:active{color:#fab432}
+.mfoot{margin-top:26px;display:flex;flex-direction:column;gap:14px}
+.mphone{color:#fff;font:700 28px 'Roboto Condensed',Arial;text-decoration:none}
+.msoc{display:flex;gap:10px}
+.mfoot .btn{width:100%}
+/* бургер → крестик */
+.burger2 .bb{position:relative;width:22px;height:16px;display:block}
+.burger2 .bb i{position:absolute;left:0;right:0;height:2px;border-radius:2px;background:currentColor;transition:.3s}
+.burger2 .bb i:nth-child(1){top:0}.burger2 .bb i:nth-child(2){top:7px}.burger2 .bb i:nth-child(3){top:14px}
+body.mnav .burger2 .bb i:nth-child(1){top:7px;transform:rotate(45deg)}
+body.mnav .burger2 .bb i:nth-child(2){opacity:0}
+body.mnav .burger2 .bb i:nth-child(3){top:7px;transform:rotate(-45deg)}
+body.mnav .burger2{border-color:#fab432;color:#fab432}
+@media(min-width:901px){.mnavp{display:none!important}}
+.mnavp a.mphone{font:700 30px 'Roboto Condensed',Arial;color:#fff;padding:0;border:0}
+.mnavp .msoc a.mico{display:inline-flex;align-items:center;justify-content:center;padding:0;width:52px;height:52px;color:#fff}
+.mnavp .mfoot a.btn{display:flex;justify-content:center;align-items:center;color:#11171c;padding:16px;border:0;font:700 16px 'Roboto Condensed',Arial}
+.mcall svg{width:20px;height:20px}
