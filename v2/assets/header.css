@@ -133,3 +133,6 @@ body.mnav .mnavp{display:block;position:absolute;left:0;right:0;top:100%;backgro
 @media(max-width:1200px){.fgrid{grid-template-columns:repeat(3,1fr)}.fcontact{grid-column:1/-1}}
 @media(max-width:900px){.fcall{grid-template-columns:1fr;gap:26px}.fgrid{grid-template-columns:1fr 1fr}.flegal{text-align:left}.ftop{position:static;margin-top:20px}.ftr2{padding-top:56px}}
 @media(max-width:560px){.fgrid{grid-template-columns:1fr}.fcol a{font-size:16px}}
+/* подвал на фирменной текстуре из знака G — как блок «Документы» */
+.ftr2{background:#11171c url(img/pattern.svg) repeat}
+.ftr2 .fform input,.ftr2 .fph span,.ftr2 .fs,.ftr2 .fprice{background:rgba(23,30,36,.92)}
