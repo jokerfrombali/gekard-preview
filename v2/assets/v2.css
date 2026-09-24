@@ -179,3 +179,9 @@ h3,.h{font-family:var(--fsub);font-weight:700;letter-spacing:0}
 body .crumbs{background:#11171c;color:#8f98a1;max-width:none;padding:16px max(28px,calc((100vw - 1320px)/2 + 28px)) 0;margin:0}
 body .crumbs a{color:#b9c0c7}
 .lp2hero{padding-top:70px}
+/* mobile overflow fixes 24.09 */
+.lp2grid>*,.lp2seo>*{min-width:0}
+@media(max-width:1000px){.lp2grid,.lp2seo{grid-template-columns:minmax(0,1fr)}}
+.prose2{overflow-wrap:anywhere}
+.toc2 a:not(.btn){overflow-wrap:anywhere}
+@media(max-width:520px){.steps4{grid-template-columns:1fr}.st{padding:22px}}
